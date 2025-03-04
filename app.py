@@ -32,6 +32,8 @@ if files:
 
         if st.checkbox(f"Show Chart - {file.name}") and not df.select_dtypes(include='number').empty:
             st.bar_chart(df.select_dtypes(include='number').iloc[:, :2])
+        # if st.checkbox(f"Show Chart - {file.name}") and not df.select_dtypes(include='number').empty:
+        #     st.bar_chart(df.select_dtypes(include='number').iloc[:, :2])
 
         format_choice = st.radio(f"Convert {file.name} to:", ["CSV", "Excel"], key=file.name)
 
