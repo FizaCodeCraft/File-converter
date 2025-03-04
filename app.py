@@ -30,8 +30,6 @@ if files:
         df = df[selected_columns]
         st.dataframe(df.head())
 
-        if st.checkbox(f"Show Chart - {file.name}") and not df.select_dtypes(include='number').empty:
-            st.bar_chart(df.select_dtypes(include='number').iloc[:, :2])
         # if st.checkbox(f"Show Chart - {file.name}") and not df.select_dtypes(include='number').empty:
         #     st.bar_chart(df.select_dtypes(include='number').iloc[:, :2])
 
